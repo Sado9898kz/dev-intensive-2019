@@ -39,3 +39,10 @@ enum class TimeUnits {
     HOUR,
     DAY
 }
+
+fun TimeUnits.plural(value: Int): String = when (this) {
+    TimeUnits.SECOND -> "$value секунду"
+    TimeUnits.MINUTE -> "$value минуты"
+    TimeUnits.HOUR -> "$value часов"
+    TimeUnits.DAY -> "$value дня"
+}
